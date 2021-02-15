@@ -1,4 +1,4 @@
-import requests
+import import requests
 import hashlib
 class Countrie():
 
@@ -21,13 +21,7 @@ def exctraction_md5(url):
         for k, v in element.items():
             hash_object_1 = hashlib.sha1(k.encode())
             hex_dig = hash_object_1.hexdigest()
-            for name, value in v.items():
-                hash_object_2 = hashlib.sha1(name.encode())
-                for position, value_position in v
-                hash_object_3 = hashlib.sha1(value.encode())
-
-            #print(hash_object.hexdigest())
-                yield hex_dig, hash_object_2, hash_object_3
+            yield hex_dig
 
 for string in exctraction_md5("https://raw.githubusercontent.com/mledoze/countries/master/countries.json"):
     print(string)
